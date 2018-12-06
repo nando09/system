@@ -2,11 +2,9 @@
 
 namespace controller\error;
 
-
 class Erro{
 
-	function __construct()
-	{
+	public function index(){
 		include_once 'view/error/404.phtml';
 	}
 }

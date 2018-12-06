@@ -5,11 +5,8 @@ namespace controller\admin;
 use lib\Main;
 
 class Home extends Main{
-	
-	function __construct()
-	{
+
+	public function home(){
 		include 'view/admin/home.phtml';
 	}
-
 }
-
