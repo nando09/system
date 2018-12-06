@@ -1,5 +1,7 @@
 <?php
 
+ 
+
 class System{
 	
 	public function __construct(argument){
