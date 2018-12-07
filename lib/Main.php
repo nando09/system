@@ -67,6 +67,10 @@ class Main{
 		$this->road = 'controller\\' . $this->main . '\\' . $this->classe;
 	}
 
+	public function getRoad(){
+		return $this->road;
+	}
+
 	public function run(){
 		$this->setRoad();
 		$this->setCallClass();

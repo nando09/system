@@ -2,11 +2,12 @@
 
 namespace controller\admin;
 
-use lib\Main;
+use controller\System;
 
-class Home extends Main{
+class Home extends System{
 
 	public function home(){
-		include 'view/admin/home.phtml';
+		$this->view();
+		// include 'view/admin/home.phtml';
 	}
 }

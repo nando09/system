@@ -2,9 +2,9 @@
 
 namespace controller\site;
 
-use lib\Main;
+use controller\System;
 
-class Home extends Main{
+class Home extends System{
 
 	public function home(){
 		// print_r("TESTE");
