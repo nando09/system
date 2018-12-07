@@ -15,13 +15,55 @@ class System extends Main{
 		parent::__construct();
 	}
 
+	private function setPath($render){
+		$this->pathRender = is_null($render) ? $this->getMethods() : $render;
+		$this->path = 'view/' . $this->getMain() . '/' . $this->getClass() . '/' . $this->pathRender . '.phtml';
+		$this->fileExists($this->path);
+		// print_r($this->path);
+		// exit();
+	}
+
+	private function fileExists($file){
+		if (!file_exists($file)) {
+			die('Erro, não foi encontrado o arquivo!!! ' . $file);
+		}
+		// else{
+		// 	print_r($this->path);
+		// 	exit();
+		// }
+	}
+
 	public function view($render = null){
 		$this->title = is_null($this->title) ? 'Meu titulo' : $this->title;
 		$this->description = is_null($this->description) ? 'Minha descrição' : $this->description;
 		$this->keywords = is_null($this->keywords) ? 'Minha palavra chave' : $this->keywords;
-		print_r($this->getRoad());
+		// print_r($this->getRoad());
 
-		// $this->setPath($render);
-		// $this->render();
+		$this->setPath($render);
+		$this->render();
+	}
+
+	public function render($file = null){
+		if (is_array($this->dados) && count($this->dados) > 0) {
+			extract($this->dados, EXTR_PREFIX_ALL, 'view');
+			extract(array(
+				'controller'=>(is_null($this->captionController) ? '' : $this->captionController),
+				'action'=>(is_null($this->captionAction) ? '' : $this->captionAction),
+				'params'=>(is_null($this->captionParams) ? '' : $this->captionParams),
+			), EXTR_PREFIX_ALL, 'caption');
+		}
+
+		if (!is_null($file) && is_array($file)) {
+			foreach ($file as $li) {
+				include($li);
+			}
+		}else if (is_null($file) && is_array($this->path)) {
+			foreach ($this->path  as $l) {
+				include($l);
+			}
+		}else{
+			$file = is_null($file) ? $this->path : $file;
+			file_exists($file) ? include ($file) : die($file);			
+		}
 	}
 }

@@ -21,7 +21,7 @@ class Main{
 	}
 
 	public function setUrl(){
-		$this->url = empty($_GET['url']) ? 'site/home' : $_GET['url'];
+		$this->url = empty($_GET['url']) ? 'site/index' : $_GET['url'];
 	}
 
 	public function setExploder(){
@@ -37,7 +37,7 @@ class Main{
 	}
 
 	public function setMethods() {
-		$this->methods = (empty($this->exploder[2]) || is_null($this->exploder[2]) || !isset($this->exploder[2]) ? 'home' : $this->exploder[2]);
+		$this->methods = (empty($this->exploder[2]) || is_null($this->exploder[2]) || !isset($this->exploder[2]) ? 'index' : $this->exploder[2]);
 	}
 
 	public function setParams(){
@@ -67,8 +67,16 @@ class Main{
 		$this->road = 'controller\\' . $this->main . '\\' . $this->classe;
 	}
 
-	public function getRoad(){
-		return $this->road;
+	public function getMain(){
+		return $this->main;
+	}
+
+	public function getClass(){
+		return $this->classe;
+	}
+
+	public function getMethods(){
+		return $this->methods;
 	}
 
 	public function run(){

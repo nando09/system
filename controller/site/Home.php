@@ -6,7 +6,7 @@ use controller\System;
 
 class Home extends System{
 
-	public function home(){
+	public function index(){
 		// print_r("TESTE");
 		include 'view/site/home.phtml';
 	}

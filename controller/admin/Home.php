@@ -6,7 +6,7 @@ use controller\System;
 
 class Home extends System{
 
-	public function home(){
+	public function index(){
 		$this->view();
 		// include 'view/admin/home.phtml';
 	}
