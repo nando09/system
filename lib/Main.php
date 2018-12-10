@@ -21,7 +21,7 @@ class Main{
 	}
 
 	public function setUrl(){
-		$this->url = empty($_GET['url']) ? 'site/index' : $_GET['url'];
+		$this->url = empty($_GET['url']) ? 'site' : $_GET['url'];
 	}
 
 	public function setExploder(){
@@ -33,7 +33,7 @@ class Main{
 	}
 
 	public function setClass() {
-		$this->classe = (empty($this->exploder[1]) || is_null($this->exploder[1]) || !isset($this->exploder[1]) ? 'site' : $this->exploder[1]);
+		$this->classe = (empty($this->exploder[1]) || is_null($this->exploder[1]) || !isset($this->exploder[1]) ? 'home' : $this->exploder[1]);
 	}
 
 	public function setMethods() {
