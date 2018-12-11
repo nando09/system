@@ -16,8 +16,8 @@ class System extends Main{
 	}
 
 	private function setPath($render){
-		$this->pathRender = is_null($render) ? $this->getMethods() : $render;
-		$this->path = 'view/' . $this->getMain() . '/' . $this->getClass() . '/' . $this->pathRender . '.phtml';
+		// $this->pathRender = is_null($render) ? $this->getMethods() : $render;
+		$this->path = 'view/' . $this->getMain() . '/' . $this->getClass() . '.phtml';
 		$this->fileExists($this->path);
 		// print_r($this->path);
 		// exit();
@@ -34,11 +34,9 @@ class System extends Main{
 	}
 
 	public function view($render = null){
-		$this->title = is_null($this->title) ? 'Meu titulo' : $this->title;
-		$this->description = is_null($this->description) ? 'Minha descrição' : $this->description;
-		$this->keywords = is_null($this->keywords) ? 'Minha palavra chave' : $this->keywords;
-		// print_r($this->getRoad());
-
+		$this->title = is_null($this->title) ? 'System Web' : $this->title;
+		$this->description = is_null($this->description) ? 'Sistem de estoque, lojas, metalurgica, empresas grandes, sistema para pequeno porte' : $this->description;
+		$this->keywords = is_null($this->keywords) ? 'Sistema de estoque, system stock, trabalhe menos para sua empresa, deixa que o sistema trabalhe por você!' : $this->keywords;
 		$this->setPath($render);
 		$this->render();
 	}
@@ -63,7 +61,7 @@ class System extends Main{
 			}
 		}else{
 			$file = is_null($file) ? $this->path : $file;
-			file_exists($file) ? include ($file) : die($file);			
+			file_exists($file);
 		}
 	}
 }
