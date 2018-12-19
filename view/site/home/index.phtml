@@ -1,0 +1,16 @@
+<?php include_once 'view/pattern/header.php' ?>
+	<h1>INI. HOME</h1>
+<?php
+	foreach ($view_list as $li) {
+		echo $li->id;
+		echo $li->nome;
+		echo $li->usuario;
+		echo $li->senha;
+		echo "<br>";
+	}
+	// echo "<pre>";
+	// print_r($view_list);
+	// echo "</pre>";
+	// exit();
+	include_once 'view/pattern/footer.php'
+?>

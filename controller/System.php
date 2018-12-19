@@ -10,6 +10,9 @@ class System extends Main{
 	private $title;	
 	private $description;
 	private $keywords;
+	protected $captionController;
+	protected $captionAction;
+	protected $captionParams;
 
 	public function __construct(){
 		parent::__construct();
@@ -17,7 +20,7 @@ class System extends Main{
 
 	private function setPath($render){
 		// $this->pathRender = is_null($render) ? $this->getMethods() : $render;
-		$this->path = 'view/' . $this->getMain() . '/' . $this->getClass() . '.phtml';
+		$this->path = 'view/' . $this->getMain() . '/' . $this->getClass() . '/'. $this->getMethods() .'.phtml';
 		$this->fileExists($this->path);
 		// print_r($this->path);
 		// exit();
@@ -61,7 +64,8 @@ class System extends Main{
 			}
 		}else{
 			$file = is_null($file) ? $this->path : $file;
-			file_exists($file);
+			file_exists($file) ? include ($file) : die($file);
+			// print_r($view_list);
 		}
 	}
 }

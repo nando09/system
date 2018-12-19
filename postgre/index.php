@@ -3,10 +3,12 @@
 	// Primeiro em php.ini temos que descomentar line pdo_psql
 	try{
 		$user = 'postgres';
-		$pass = 'Sof@1502';
-		$db = new PDO('pgsql:host=localhost;port=5432;dbname=Teste', $user, $pass);
+		$pass = 'fer7660nando';
+		$db = new PDO('pgsql:host=localhost;port=5432;dbname=system', $user, $pass);
+
+		// PDO('pgsql:host=localhost;port=5432;dbname=system', 'postgres', 'fer7660nando');
 		print_r("Conexão ligada com sucesso!");
-		$query = $db->query("SELECT * FROM usuario");
+		$query = $db->query("SELECT * FROM USUARIO");
 
 		foreach ($query as $dado) {
 			echo "<br>";
@@ -15,9 +17,9 @@
 			echo "<br>";
 			echo "NOME: " . $dado['nome'];
 			echo "<br>";
-			echo "EMAIL: " . $dado['email'];
+			echo "EMAIL: " . $dado['usuario'];
 			echo "<br>";
-			echo "USUARIO: " . $dado['usuario'];
+			echo "USUARIO: " . $dado['senha'];
 		}
 		// var_dump($query);
 	}catch(Exception $e){

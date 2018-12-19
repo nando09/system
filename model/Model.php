@@ -18,15 +18,17 @@ class Model extends Connect{
 			// echo "<pre>";
 			// exit();
 
-			// $this->con = new \PDO("mysql:host=" . self::srvMyhost . ";dbname=" . self::srvMyname . "; '" . self::srvMyuser . "', '" . self::srvMypass . "'");
+			// $this->connect = new \PDO("mysql:host=" . self::srvMyhost . ";dbname=" . self::srvMyname . "; '" . self::srvMyuser . "', '" . self::srvMypass . "'");
 			// die(self::srvMyhost ."\n" . self::srvMyname ."\n" . self::srvMyuser ."\n" . self::srvMypass);
 			// die("mysql:host=" . self::srvMyhost . ";dbname=" . self::srvMyname . ";" . self::srvMyuser, self::srvMypass);
-			$this->con = new \PDO('mysql:host='. self::srvMyhost .';dbname='. self::srvMyname .';', self::srvMyuser, self::srvMypass);
-			$this->con->exec("set names " . self::charset);
-			$this->con->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+			$this->connect = new \PDO('pgsql:host='. self::srvMyhost .';port='. self::srvMyport .';dbname='. self::srvMyname, self::srvMyuser, self::srvMypass);
+			// $this->connect = new \PDO('pgsql:host=localhost;port=5432;dbname=system', 'postgres', 'fer7660nando');
+			$this->connect->exec("set names " . self::charset);
+			$this->connect->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 			// exit();
 
 		}catch (\PDOException $ex){
+			print_r("Teste<br>");
 			die($ex->getMessage());
 		}
 	}
@@ -44,12 +46,12 @@ class Model extends Connect{
 			$array[] = $row;
 		}
 
-		return $array;	
+		return $array;
 	}
 
 	public function Insert($sql){
 		try{
-			$state = $this->con->prepare($sql);
+			$state = $this->connect->prepare($sql);
 			$state->execute(array('widgets'));
 		}catch(\PDOException $ex){
 			die($ex->getMessage() . " " . $sql);
@@ -64,7 +66,7 @@ class Model extends Connect{
 
 	public function Update($sql){
 		try{
-			$state = $this->con->prepare($sql);
+			$state = $this->connect->prepare($sql);
 			$state->execute(array('widgets'));
 		}catch(\PDOException $ex){
 			die($ex->getMessage() . " " . $sql);
@@ -75,7 +77,7 @@ class Model extends Connect{
 
 	public function Delete($sql){
 		try{
-			$state = $this->con->prepare($sql);
+			$state = $this->connect->prepare($sql);
 			$state->execute(array('widgets'));
 		}catch(\PDOException $ex){
 			die($ex->getMessage() . " " . $sql);
