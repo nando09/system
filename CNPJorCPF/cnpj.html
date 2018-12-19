@@ -1,0 +1,83 @@
+<html>
+	<title>.:: C&oacute;digo Fonte ::.</title>
+	<head>
+		<meta charset="utf-8">
+		<script language="javascript">
+			function VerificaCPF () {
+				if (validarCNPJ(document.frmcpf.cpf.value)) 
+				{
+					document.frmcpf.submit();
+				} else  {errors="1";if (errors) alert('CNPJ NÃO VÁLIDO');
+				document.retorno = (errors == '');}
+			}
+
+			function validarCNPJ(cnpj) {
+			 
+				cnpj = cnpj.replace(/[^\d]+/g,'');
+			 
+				if(cnpj == '') return false;
+				 
+				if (cnpj.length != 14)
+					return false;
+			 
+				// Elimina CNPJs invalidos conhecidos
+				if (cnpj == "00000000000000" || 
+					cnpj == "11111111111111" || 
+					cnpj == "22222222222222" || 
+					cnpj == "33333333333333" || 
+					cnpj == "44444444444444" || 
+					cnpj == "55555555555555" || 
+					cnpj == "66666666666666" || 
+					cnpj == "77777777777777" || 
+					cnpj == "88888888888888" || 
+					cnpj == "99999999999999")
+					return false;
+					 
+				// Valida DVs
+				tamanho = cnpj.length - 2
+				numeros = cnpj.substring(0,tamanho);
+				digitos = cnpj.substring(tamanho);
+				soma = 0;
+				pos = tamanho - 7;
+				for (i = tamanho; i >= 1; i--) {
+				  soma += numeros.charAt(tamanho - i) * pos--;
+				  if (pos < 2)
+						pos = 9;
+				}
+				resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+				if (resultado != digitos.charAt(0))
+					return false;
+					 
+				tamanho = tamanho + 1;
+				numeros = cnpj.substring(0,tamanho);
+				soma = 0;
+				pos = tamanho - 7;
+				for (i = tamanho; i >= 1; i--) {
+				  soma += numeros.charAt(tamanho - i) * pos--;
+				  if (pos < 2)
+						pos = 9;
+				}
+				resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
+				if (resultado != digitos.charAt(1))
+					  return false;
+
+				alert('O CNPJ INFORMADO É VÁLIDO.');return true;
+			}
+</script>
+</head>
+ 
+<body>
+	<form name="frmcpf" method="post" action="default.html" onsubmit="VerificaCPF();">
+		<table width="34%" border="1" cellspacing="0" cellpadding="0" align="center" height="51">
+			<tr>
+				<td> 
+					<div align="center">Informe o CPF ou CNPJ: 
+						<input type="text" name="cpf" size="12" maxlength="11">
+						<input type="button" name="Submit" value="Checar" onclick="VerificaCPF();">
+					</div>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
