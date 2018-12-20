@@ -13,6 +13,7 @@ use PHPMailer\PHPMailer\Exception;
 
 
 $mail = new PHPMailer();                              // Passing `true` enables exceptions
+$mail->charSet = "utf8";
 try {
 	// /**********		MAILTRAP	**********/
 	// //Server settings
@@ -28,19 +29,19 @@ try {
 
 	/**********		OUTLOOK	**********/
 	//Server settings
-	$mail->SMTPDebug = 2;                                 // Enable verbose debug output
+	$mail->SMTPDebug = 0;                                 // Enable verbose debug output
 	$mail->isSMTP();                                      // Set mailer to use SMTP
-	$mail->Host = 'smtp.office365.com';  // Specify main and backup SMTP servers
+	$mail->Host = 'email-ssl.com.br';  // Specify main and backup SMTP servers
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'nando.online@live.com';                 // SMTP username
-	$mail->Password = 'FErnando.NET';                           // SMTP password
+	$mail->Username = 'fernando@fernandobatista.com.br';                 // SMTP username
+	$mail->Password = 'fer7660nando';                           // SMTP password
 	$mail->SMTPSecure = 'TLS';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 587;                                    // TCP port to connect to
 
 
 	//Recipients
-	$mail->setFrom('nando.online.fb@gmail.com', 'Fernando');
-	$mail->addAddress('testedoidaododida@live.com.br', 'Nando');     // Add a recipient
+	$mail->setFrom('fernando@fernandobatista.com.br', 'Fernando');
+	$mail->addAddress('nando.online@live.com', 'Nando');     // Add a recipient
 
 	//Content
 	$mail->isHTML(true);                                  // Set email format to HTML
@@ -48,8 +49,13 @@ try {
 	$mail->Body    = 'Teste doido!</b>';
 	$mail->AltBody = 'Vamos ver se da certo!';
 
-	$mail->send();
-	echo 'Message has been sent';
+	if ($mail->send()) {
+		echo 'Sucesso!';
+	}else{
+		echo 'Erro!';
+	}
+
+
 } catch (Exception $e) {
 	echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 }
