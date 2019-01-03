@@ -42,6 +42,10 @@ class Main{
 
 	public function setParams(){
 		$this->params = (empty($this->exploder[3]) || is_null($this->exploder[3]) || !isset($this->exploder[3]) ? '' : $this->exploder[3]);
+		// if (is_null($this->params)) {
+		// 	print_r($this->params);
+		// 	exit();
+		// }
 	}
 
 	//Ligação se é Class
@@ -69,6 +73,13 @@ class Main{
 
 	public function getMain(){
 		return $this->main;
+	}
+
+	public function getParams() {
+		// print_r($this->params);
+		// exit();
+		// return isset($this->params[$indice]) ? $this->params[$indice] : null;
+		return $this->params;
 	}
 
 	public function getClass(){

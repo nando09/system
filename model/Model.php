@@ -49,25 +49,39 @@ class Model extends Connect{
 		return $array;
 	}
 
-	public function Insert($sql){
+	public function Insert($sql, $table){
 		try{
+			// die($sql);
 			$state = $this->connect->prepare($sql);
-			$state->execute(array('widgets'));
+			// $state->execute(array('widgets'));
+			$state->execute();
 		}catch(\PDOException $ex){
 			die($ex->getMessage() . " " . $sql);
 		}
 
 		return array(
 			'sucess'=>true,
-			'feedback'=>'',
-			'codigo'=>$this->Last($table)
+			'feedback'=>''
+			// 'codigo'=>$this->Last($table)
 		);
 	}
+
+	// public function Last($table){
+	// 	try{
+	// 		$state = $this->connect->prepare("SELECT last_insert_id() as last FROM ". $table);
+	// 		$state->execute();
+	// 		$state = $state->fetchObject();
+	// 	}catch(\PDOException $ex){ 
+	// 		die($ex->getMessage() . " " . $sql);
+	// 	}
+
+	// 	return $state->last;		
+	// }
 
 	public function Update($sql){
 		try{
 			$state = $this->connect->prepare($sql);
-			$state->execute(array('widgets'));
+			$state->execute();
 		}catch(\PDOException $ex){
 			die($ex->getMessage() . " " . $sql);
 		}
@@ -78,11 +92,35 @@ class Model extends Connect{
 	public function Delete($sql){
 		try{
 			$state = $this->connect->prepare($sql);
-			$state->execute(array('widgets'));
+			$state->execute();
 		}catch(\PDOException $ex){
 			die($ex->getMessage() . " " . $sql);
 		}
 
 		return array('sucess'=>true, 'feedback'=>'');		
+	}
+
+	public function First($obj){
+		// echo "<pre>";
+		// print_r($obj);
+		// echo "<pre>";
+		// exit();
+		if(isset($obj[0])){
+			return $obj[0];
+		}else{
+			return null;
+		}
+	}
+
+	public function setObject($obj, $value, $exits = true){
+		if (is_object($obj)) {
+			if (count($value) > 0) {
+				foreach ($value as $key => $va) {
+					if (property_exists($obj, $key) || $exits) {
+						$obj->$key = $value->$key;
+					}
+				}
+			}
+		}
 	}
 }

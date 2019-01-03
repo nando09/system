@@ -1,12 +1,12 @@
 <?php
 
-namespace object\usuario;
+namespace object\Usuario;
 
-use object\Object;
+use object\object;
 
 class Usuario extends Object{
 	public $id;
 	public $nome;
-	public $user;
-	public $pass;
+	public $usuario;
+	public $senha;
 }

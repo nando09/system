@@ -3,11 +3,14 @@
 namespace api\usuario;
 
 use model\Model;
+use object\usuario\Usuario as UsuarioKey;
 
 class Usuario extends Model{
-	public function get(Usuario $obj){
-		$valor = ($obj->codUsuario != '') ? $obj->codUsuario : 0;
-		$query = $this->First($this->Select("SELECT * FROM " . get_class($this) . " WHERE id = " . $valor));
+	public function get(UsuarioKey $obj){
+		$valor = ($obj->id != '') ? $obj->id : 0;
+		// print_r($valor);
+		// exit();
+		$query = $this->First($this->Select("SELECT * FROM USUARIO WHERE id = " . $valor));
 		$this->setObject($obj, $query);
 		return $query;
 	}
@@ -17,11 +20,11 @@ class Usuario extends Model{
 		return $this->Select("SELECT * FROM USUARIO");
 	}
 
-	public function save(Usuario $obj){
-		if (empty($obj->codUsuario)) {
-			return $this->Insert($obj, 'usuario');
+	public function save(UsuarioKey $obj){
+		if (empty($obj->id)) {
+			return $this->Insert("INSERT INTO USUARIO (NOME, USUARIO, SENHA) VALUES ('". $obj->nome ."', '". $obj->usuario ."', MD5('". $obj->senha ."'))", 'USUARIO');
 		}else{
-			return $this->Update($obj, array('codUsuario' => $obj->codUsuario), 'usuario');
+			return $this->Update("UPDATE usuario SET nome = '". $obj->nome ."', usuario = '". $obj->usuario ."', senha = MD5('". $obj->senha ."') WHERE id = ". $obj->id, 'USUARIO');
 		}
 	}
 }

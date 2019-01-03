@@ -98,6 +98,9 @@ CREATE TABLE USUARIO(
 DROP TABLE USUARIO;
 
 SELECT * FROM USUARIO;
+DELETE FROM USUARIO WHERE id = 13;
+UPDATE usuario SET nome = 'João',usuario = 'Joção', senha = MD5('joão') WHERE id = 12;
+UPDATE usuario SET nome = 'Filipinas',usuario = 'Doidão', senha = MD5('açucar') WHERE id = 10;
 
 INSERT INTO USUARIO (NOME, USUARIO, SENHA) VALUES ('Fernando', 'nando', MD5('123321'));
 INSERT INTO USUARIO (NOME, USUARIO, SENHA) VALUES ('Jaqueline', 'jaque', MD5('jaque'));

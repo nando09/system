@@ -48,7 +48,7 @@ try {
 	$mail->Subject = 'Eu quero é mais!';
 	$mail->Body    = 'Teste doido!</b>';
 	$mail->AltBody = 'Vamos ver se da certo!';
-
+	$mail->CharSet = 'UTF-8';
 	if ($mail->send()) {
 		echo 'Sucesso!';
 	}else{

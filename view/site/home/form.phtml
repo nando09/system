@@ -1,0 +1,20 @@
+<?php include_once 'view/pattern/header.php' ?>
+	<h1>EDITAR</h1>
+	<form action="/System/system/site/home/save" method="post">
+		<input type="hidden" name="id" value="<?php echo $view_dados->id ?>" placeholder="id">
+		<br>
+		<input type="text" name="nome" value="<?php echo $view_dados->nome ?>" placeholder="nome">
+		<br>
+		<input type="text" name="usuario" value="<?php echo $view_dados->usuario ?>" placeholder="usuario">
+		<br>
+		<input type="text" name="senha" value="<?php echo $view_dados->senha ?>" placeholder="senha">
+		<br>
+		<button type="submit">Gravar</button>
+	</form>
+<?php
+	// echo "<pre>";
+	// print_r($view_list);
+	// echo "</pre>";
+	// exit();
+	include_once 'view/pattern/footer.php'
+?>
