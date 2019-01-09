@@ -1,3 +1,5 @@
+	<!-- Data Table area End-->
+	<!-- Start Footer area-->
 	<div class="footer-copyright-area">
 		<div class="container">
 			<div class="row">
@@ -40,40 +42,37 @@
 	<!-- mCustomScrollbar JS
 		============================================ -->
 	<script src="/System/system/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-	<!-- jvectormap JS
-		============================================ -->
-	<script src="/System/system/js/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
-	<script src="/System/system/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-	<script src="/System/system/js/jvectormap/jvectormap-active.js"></script>
 	<!-- sparkline JS
 		============================================ -->
 	<script src="/System/system/js/sparkline/jquery.sparkline.min.js"></script>
 	<script src="/System/system/js/sparkline/sparkline-active.js"></script>
-	<!-- sparkline JS
+	<!-- flot JS
 		============================================ -->
 	<script src="/System/system/js/flot/jquery.flot.js"></script>
 	<script src="/System/system/js/flot/jquery.flot.resize.js"></script>
-	<script src="/System/system/js/flot/curvedLines.js"></script>
 	<script src="/System/system/js/flot/flot-active.js"></script>
 	<!-- knob JS
 		============================================ -->
 	<script src="/System/system/js/knob/jquery.knob.js"></script>
 	<script src="/System/system/js/knob/jquery.appear.js"></script>
 	<script src="/System/system/js/knob/knob-active.js"></script>
+	<!--  Chat JS
+		============================================ -->
+	<script src="/System/system/js/chat/jquery.chat.js"></script>
+	<!--  todo JS
+		============================================ -->
+	<script src="/System/system/js/todo/jquery.todo.js"></script>
 	<!--  wave JS
 		============================================ -->
 	<script src="/System/system/js/wave/waves.min.js"></script>
 	<script src="/System/system/js/wave/wave-active.js"></script>
-	<!--  todo JS
-		============================================ -->
-	<script src="/System/system/js/todo/jquery.todo.js"></script>
 	<!-- plugins JS
 		============================================ -->
 	<script src="/System/system/js/plugins.js"></script>
-	<!--  Chat JS
+	<!-- Data Table JS
 		============================================ -->
-	<script src="/System/system/js/chat/moment.min.js"></script>
-	<script src="/System/system/js/chat/jquery.chat.js"></script>
+	<script src="/System/system/js/data-table/jquery.dataTables.min.js"></script>
+	<script src="/System/system/js/data-table/data-table-act.js"></script>
 	<!-- main JS
 		============================================ -->
 	<script src="/System/system/js/main.js"></script>
@@ -81,5 +80,4 @@
 		============================================ -->
 	<script src="/System/system/js/tawk-chat.js"></script>
 </body>
-
 </html>

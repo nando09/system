@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="no-js" lang="">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Dashboard One | Notika - Notika Admin Template</title>
+	<title>Data Table | Notika - Notika Admin Template</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- favicon
@@ -15,7 +16,7 @@
 	<!-- Bootstrap CSS
 		============================================ -->
 	<link rel="stylesheet" href="/System/system/css/bootstrap.min.css">
-	<!-- Bootstrap CSS
+	<!-- font awesome CSS
 		============================================ -->
 	<link rel="stylesheet" href="/System/system/css/font-awesome.min.css">
 	<!-- owl.carousel CSS
@@ -32,18 +33,19 @@
 	<!-- normalize CSS
 		============================================ -->
 	<link rel="stylesheet" href="/System/system/css/normalize.css">
-	<!-- mCustomScrollbar CSS
-		============================================ -->
-	<link rel="stylesheet" href="/System/system/css/scrollbar/jquery.mCustomScrollbar.min.css">
-	<!-- jvectormap CSS
-		============================================ -->
-	<link rel="stylesheet" href="/System/system/css/jvectormap/jquery-jvectormap-2.0.3.css">
-	<!-- notika icon CSS
-		============================================ -->
-	<link rel="stylesheet" href="/System/system/css/notika-custom-icon.css">
 	<!-- wave CSS
 		============================================ -->
 	<link rel="stylesheet" href="/System/system/css/wave/waves.min.css">
+	<link rel="stylesheet" href="/System/system/css/wave/button.css">
+	<!-- mCustomScrollbar CSS
+		============================================ -->
+	<link rel="stylesheet" href="/System/system/css/scrollbar/jquery.mCustomScrollbar.min.css">
+	<!-- Notika icon CSS
+		============================================ -->
+	<link rel="stylesheet" href="/System/system/css/notika-custom-icon.css">
+	<!-- Data Table JS
+		============================================ -->
+	<link rel="stylesheet" href="/System/system/css/jquery.dataTables.min.css">
 	<!-- main CSS
 		============================================ -->
 	<link rel="stylesheet" href="/System/system/css/main.css">
@@ -87,7 +89,7 @@
 								<a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-mail"></i></span></a>
 								<div role="menu" class="dropdown-menu message-dd animated zoomIn">
 									<div class="hd-mg-tt">
-										<h2>Mensagens</h2>
+										<h2>Messages</h2>
 									</div>
 									<div class="hd-message-info">
 										<a href="#">
@@ -147,14 +149,14 @@
 										</a>
 									</div>
 									<div class="hd-mg-va">
-										<a href="#">Ver todas</a>
+										<a href="#">View All</a>
 									</div>
 								</div>
 							</li>
 							<li class="nav-item nc-al"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle"><span><i class="notika-icon notika-alarm"></i></span><div class="spinner4 spinner-4"></div><div class="ntd-ctn"><span>3</span></div></a>
 								<div role="menu" class="dropdown-menu message-dd notification-dd animated zoomIn">
 									<div class="hd-mg-tt">
-										<h2>Notificação</h2>
+										<h2>Notification</h2>
 									</div>
 									<div class="hd-message-info">
 										<a href="#">
@@ -214,7 +216,7 @@
 										</a>
 									</div>
 									<div class="hd-mg-va">
-										<a href="#">Ver todas</a>
+										<a href="#">View All</a>
 									</div>
 								</div>
 							</li>
@@ -248,7 +250,7 @@
 												<div class="lead-content">
 													<p>Bootstrap Admin</p>
 												</div>
-												<div class="progress-bar wow fadeInLeft" data-progress="93%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>65%</span> </div>
+												<div class="progress-bar wow fadeInLeft" data-progress="65%" style="width: 65%;" data-wow-duration="1.5s" data-wow-delay="1.2s"><span>65%</span> </div>
 											</div>
 											<div class="progress progress-bt">
 												<div class="lead-content">
@@ -354,89 +356,89 @@
 							<ul class="mobile-menu-nav">
 								<li><a data-toggle="collapse" data-target="#Charts" href="#">Home</a>
 									<ul class="collapse dropdown-header-top">
-										<li><a href="index.html">Dashboard One</a></li>
-										<li><a href="index-2.html">Dashboard Two</a></li>
-										<li><a href="index-3.html">Dashboard Three</a></li>
-										<li><a href="index-4.html">Dashboard Four</a></li>
-										<li><a href="analytics.html">Analytics</a></li>
-										<li><a href="widgets.html">Widgets</a></li>
+										<li><a href="/System/system/index.html">Dashboard One</a></li>
+										<li><a href="/System/system/index-2.html">Dashboard Two</a></li>
+										<li><a href="/System/system/index-3.html">Dashboard Three</a></li>
+										<li><a href="/System/system/index-4.html">Dashboard Four</a></li>
+										<li><a href="/System/system/analytics.html">Analytics</a></li>
+										<li><a href="/System/system/widgets.html">Widgets</a></li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#demoevent" href="#">Email</a>
 									<ul id="demoevent" class="collapse dropdown-header-top">
-										<li><a href="inbox.html">Inbox</a></li>
-										<li><a href="view-email.html">View Email</a></li>
-										<li><a href="compose-email.html">Compose Email</a></li>
+										<li><a href="/System/system/inbox.html">Inbox</a></li>
+										<li><a href="/System/system/view-email.html">View Email</a></li>
+										<li><a href="/System/system/compose-email.html">Compose Email</a></li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#democrou" href="#">Interface</a>
 									<ul id="democrou" class="collapse dropdown-header-top">
-										<li><a href="animations.html">Animations</a></li>
-										<li><a href="google-map.html">Google Map</a></li>
-										<li><a href="data-map.html">Data Maps</a></li>
-										<li><a href="code-editor.html">Code Editor</a></li>
-										<li><a href="image-cropper.html">Images Cropper</a></li>
-										<li><a href="wizard.html">Wizard</a></li>
+										<li><a href="/System/system/animations.html">Animations</a></li>
+										<li><a href="/System/system/google-map.html">Google Map</a></li>
+										<li><a href="/System/system/data-map.html">Data Maps</a></li>
+										<li><a href="/System/system/code-editor.html">Code Editor</a></li>
+										<li><a href="/System/system/image-cropper.html">Images Cropper</a></li>
+										<li><a href="/System/system/wizard.html">Wizard</a></li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#demolibra" href="#">Charts</a>
 									<ul id="demolibra" class="collapse dropdown-header-top">
-										<li><a href="flot-charts.html">Flot Charts</a></li>
-										<li><a href="bar-charts.html">Bar Charts</a></li>
-										<li><a href="line-charts.html">Line Charts</a></li>
-										<li><a href="area-charts.html">Area Charts</a></li>
+										<li><a href="/System/system/flot-charts.html">Flot Charts</a></li>
+										<li><a href="/System/system/bar-charts.html">Bar Charts</a></li>
+										<li><a href="/System/system/line-charts.html">Line Charts</a></li>
+										<li><a href="/System/system/area-charts.html">Area Charts</a></li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#demodepart" href="#">Tables</a>
 									<ul id="demodepart" class="collapse dropdown-header-top">
-										<li><a href="normal-table.html">Normal Table</a></li>
-										<li><a href="data-table.html">Data Table</a></li>
+										<li><a href="/System/system/normal-table.html">Normal Table</a></li>
+										<li><a href="/System/system/data-table.html">Data Table</a></li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#demo" href="#">Forms</a>
 									<ul id="demo" class="collapse dropdown-header-top">
-										<li><a href="form-elements.html">Form Elements</a></li>
-										<li><a href="form-components.html">Form Components</a></li>
-										<li><a href="form-examples.html">Form Examples</a></li>
+										<li><a href="/System/system/form-elements.html">Form Elements</a></li>
+										<li><a href="/System/system/form-components.html">Form Components</a></li>
+										<li><a href="/System/system/form-examples.html">Form Examples</a></li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#Miscellaneousmob" href="#">App views</a>
 									<ul id="Miscellaneousmob" class="collapse dropdown-header-top">
-										<li><a href="notification.html">Notifications</a>
+										<li><a href="/System/system/notification.html">Notifications</a>
 										</li>
-										<li><a href="alert.html">Alerts</a>
+										<li><a href="/System/system/alert.html">Alerts</a>
 										</li>
-										<li><a href="modals.html">Modals</a>
+										<li><a href="/System/system/modals.html">Modals</a>
 										</li>
-										<li><a href="buttons.html">Buttons</a>
+										<li><a href="/System/system/buttons.html">Buttons</a>
 										</li>
-										<li><a href="tabs.html">Tabs</a>
+										<li><a href="/System/system/tabs.html">Tabs</a>
 										</li>
-										<li><a href="accordion.html">Accordion</a>
+										<li><a href="/System/system/accordion.html">Accordion</a>
 										</li>
-										<li><a href="dialog.html">Dialogs</a>
+										<li><a href="/System/system/dialog.html">Dialogs</a>
 										</li>
-										<li><a href="popovers.html">Popovers</a>
+										<li><a href="/System/system/popovers.html">Popovers</a>
 										</li>
-										<li><a href="tooltips.html">Tooltips</a>
+										<li><a href="/System/system/tooltips.html">Tooltips</a>
 										</li>
-										<li><a href="dropdown.html">Dropdowns</a>
+										<li><a href="/System/system/dropdown.html">Dropdowns</a>
 										</li>
 									</ul>
 								</li>
 								<li><a data-toggle="collapse" data-target="#Pagemob" href="#">Pages</a>
 									<ul id="Pagemob" class="collapse dropdown-header-top">
-										<li><a href="contact.html">Contact</a>
+										<li><a href="/System/system/contact.html">Contact</a>
 										</li>
-										<li><a href="invoice.html">Invoice</a>
+										<li><a href="/System/system/invoice.html">Invoice</a>
 										</li>
-										<li><a href="typography.html">Typography</a>
+										<li><a href="/System/system/typography.html">Typography</a>
 										</li>
-										<li><a href="color.html">Color</a>
+										<li><a href="/System/system/color.html">Color</a>
 										</li>
-										<li><a href="login-register.html">Login Register</a>
+										<li><a href="/System/system/login-register.html">Login Register</a>
 										</li>
-										<li><a href="404.html">404 Page</a>
+										<li><a href="/System/system/404.html">404 Page</a>
 										</li>
 									</ul>
 								</li>
@@ -472,115 +474,115 @@
 						</li>
 					</ul>
 					<div class="tab-content custom-menu-content">
-						<div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
+						<div id="Home" class="tab-pane in notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="index.html">Dashboard One</a>
+								<li><a href="/System/system/index.html">Dashboard One</a>
 								</li>
-								<li><a href="index-2.html">Dashboard Two</a>
+								<li><a href="/System/system/index-2.html">Dashboard Two</a>
 								</li>
-								<li><a href="index-3.html">Dashboard Three</a>
+								<li><a href="/System/system/index-3.html">Dashboard Three</a>
 								</li>
-								<li><a href="index-4.html">Dashboard Four</a>
+								<li><a href="/System/system/index-4.html">Dashboard Four</a>
 								</li>
-								<li><a href="analytics.html">Analytics</a>
+								<li><a href="/System/system/analytics.html">Analytics</a>
 								</li>
-								<li><a href="widgets.html">Widgets</a>
+								<li><a href="/System/system/widgets.html">Widgets</a>
 								</li>
 							</ul>
 						</div>
 						<div id="mailbox" class="tab-pane notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="inbox.html">Inbox</a>
+								<li><a href="/System/system/inbox.html">Inbox</a>
 								</li>
-								<li><a href="view-email.html">View Email</a>
+								<li><a href="/System/system/view-email.html">View Email</a>
 								</li>
-								<li><a href="compose-email.html">Compose Email</a>
+								<li><a href="/System/system/compose-email.html">Compose Email</a>
 								</li>
 							</ul>
 						</div>
 						<div id="Interface" class="tab-pane notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="animations.html">Animations</a>
+								<li><a href="/System/system/animations.html">Animations</a>
 								</li>
-								<li><a href="google-map.html">Google Map</a>
+								<li><a href="/System/system/google-map.html">Google Map</a>
 								</li>
-								<li><a href="data-map.html">Data Maps</a>
+								<li><a href="/System/system/data-map.html">Data Maps</a>
 								</li>
-								<li><a href="code-editor.html">Code Editor</a>
+								<li><a href="/System/system/code-editor.html">Code Editor</a>
 								</li>
-								<li><a href="image-cropper.html">Images Cropper</a>
+								<li><a href="/System/system/image-cropper.html">Images Cropper</a>
 								</li>
-								<li><a href="wizard.html">Wizard</a>
+								<li><a href="/System/system/wizard.html">Wizard</a>
 								</li>
 							</ul>
 						</div>
 						<div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="flot-charts.html">Flot Charts</a>
+								<li><a href="/System/system/flot-charts.html">Flot Charts</a>
 								</li>
-								<li><a href="bar-charts.html">Bar Charts</a>
+								<li><a href="/System/system/bar-charts.html">Bar Charts</a>
 								</li>
-								<li><a href="line-charts.html">Line Charts</a>
+								<li><a href="/System/system/line-charts.html">Line Charts</a>
 								</li>
-								<li><a href="area-charts.html">Area Charts</a>
+								<li><a href="/System/system/area-charts.html">Area Charts</a>
 								</li>
 							</ul>
 						</div>
-						<div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
+						<div id="Tables" class="tab-pane active notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="normal-table.html">Normal Table</a>
+								<li><a href="/System/system/normal-table.html">Normal Table</a>
 								</li>
-								<li><a href="data-table.html">Data Table</a>
+								<li><a href="/System/system/data-table.html">Data Table</a>
 								</li>
 							</ul>
 						</div>
 						<div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="form-elements.html">Form Elements</a>
+								<li><a href="/System/system/form-elements.html">Form Elements</a>
 								</li>
-								<li><a href="form-components.html">Form Components</a>
+								<li><a href="/System/system/form-components.html">Form Components</a>
 								</li>
-								<li><a href="form-examples.html">Form Examples</a>
+								<li><a href="/System/system/form-examples.html">Form Examples</a>
 								</li>
 							</ul>
 						</div>
 						<div id="Appviews" class="tab-pane notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="notification.html">Notifications</a>
+								<li><a href="/System/system/notification.html">Notifications</a>
 								</li>
-								<li><a href="alert.html">Alerts</a>
+								<li><a href="/System/system/alert.html">Alerts</a>
 								</li>
-								<li><a href="modals.html">Modals</a>
+								<li><a href="/System/system/modals.html">Modals</a>
 								</li>
-								<li><a href="buttons.html">Buttons</a>
+								<li><a href="/System/system/buttons.html">Buttons</a>
 								</li>
-								<li><a href="tabs.html">Tabs</a>
+								<li><a href="/System/system/tabs.html">Tabs</a>
 								</li>
-								<li><a href="accordion.html">Accordion</a>
+								<li><a href="/System/system/accordion.html">Accordion</a>
 								</li>
-								<li><a href="dialog.html">Dialogs</a>
+								<li><a href="/System/system/dialog.html">Dialogs</a>
 								</li>
-								<li><a href="popovers.html">Popovers</a>
+								<li><a href="/System/system/popovers.html">Popovers</a>
 								</li>
-								<li><a href="tooltips.html">Tooltips</a>
+								<li><a href="/System/system/tooltips.html">Tooltips</a>
 								</li>
-								<li><a href="dropdown.html">Dropdowns</a>
+								<li><a href="/System/system/dropdown.html">Dropdowns</a>
 								</li>
 							</ul>
 						</div>
 						<div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
 							<ul class="notika-main-menu-dropdown">
-								<li><a href="contact.html">Contact</a>
+								<li><a href="/System/system/contact.html">Contact</a>
 								</li>
-								<li><a href="invoice.html">Invoice</a>
+								<li><a href="/System/system/invoice.html">Invoice</a>
 								</li>
-								<li><a href="typography.html">Typography</a>
+								<li><a href="/System/system/typography.html">Typography</a>
 								</li>
-								<li><a href="color.html">Color</a>
+								<li><a href="/System/system/color.html">Color</a>
 								</li>
-								<li><a href="login-register.html">Login Register</a>
+								<li><a href="/System/system/login-register.html">Login Register</a>
 								</li>
-								<li><a href="404.html">404 Page</a>
+								<li><a href="/System/system/404.html">404 Page</a>
 								</li>
 							</ul>
 						</div>

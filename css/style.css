@@ -168,11 +168,11 @@ body {}
 }
 @font-face {
   font-family: 'notika-icon';
-  src:  url('fonts/notika-icon.eot?qzfrsz');
-  src:  url('fonts/notika-icon.eot?qzfrsz#iefix') format('embedded-opentype'),
-    url('fonts/notika-icon.ttf?qzfrsz') format('truetype'),
-    url('fonts/notika-icon.woff?qzfrsz') format('woff'),
-    url('fonts/notika-icon.svg?qzfrsz#notika-icon') format('svg');
+  src:  url('/System/system/fonts/notika-icon.eot?qzfrsz');
+  src:  url('/System/system/fonts/notika-icon.eot?qzfrsz#iefix') format('embedded-opentype'),
+    url('/System/system/fonts/notika-icon.ttf?qzfrsz') format('truetype'),
+    url('/System/system/fonts/notika-icon.woff?qzfrsz') format('woff'),
+    url('/System/system/fonts/notika-icon.svg?qzfrsz#notika-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -2367,7 +2367,7 @@ hr {
     padding: 0;
     width: 22px;
     height: 22px;
-    background: url(img/green1.png) no-repeat;
+    background: url(/System/system/img/green1.png) no-repeat;
     border: none;
     cursor: pointer;
 }
@@ -2970,7 +2970,7 @@ textarea.auto-size {
     background-color: #FFF;
     background-position: right calc(100% - 7px);
     background-repeat: no-repeat;
-    background-image: url(images/select.png);
+    background-image: url(/System/system/images/select.png);
     pointer-events: none;
     z-index: 5;
 }
@@ -3146,7 +3146,7 @@ textarea.auto-size {
 .chosen-container-multi .chosen-choices li.search-choice .search-choice-close{
 	width: 15px;
     height: 10px;
-    background: url(img/chosen-sprite.png) -38px 1px no-repeat;
+    background: url(/System/system/img/chosen-sprite.png) -38px 1px no-repeat;
 	display: inline-block;
     text-align: center;
 	color:#333;
@@ -3169,7 +3169,7 @@ textarea.auto-size {
     background-color: #FFF;
     background-position: right calc(100% - 7px);
     background-repeat: no-repeat;
-    background-image: url(images/select.png);
+    background-image: url(/System/system/images/select.png);
     pointer-events: none;
     z-index: 5;
 }
@@ -4063,8 +4063,8 @@ textarea.auto-size {
     padding: 6px 25px;
 }
 .chosen-container-single .chosen-search input[type="text"]{
-	background: white url(chosen-sprite.png) no-repeat 100% -20px;
-    background: url(chosen-sprite.png) no-repeat 100% -45px;
+	background: white url(/System/system/chosen-sprite.png) no-repeat 100% -20px;
+    background: url(/System/system/chosen-sprite.png) no-repeat 100% -45px;
 }
 .modal-footer .btn-primary[disabled]:focus, .modal-footer .btn-primary[disabled]:hover{
 	background: #00c292;

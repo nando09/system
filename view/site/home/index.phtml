@@ -1,36 +1,68 @@
 <?php include_once 'view/pattern/header.php' ?>
-	<h1>INI. HOME</h1>
-	<table>
-		<tr>
-			<td>--</td>
-			<td>NOME</td>
-			<td>USUARIO</td>
-			<td>SENHA</td>
-		</tr>
-<?php
-	foreach ($view_list as $li) {
-		echo "<tr>";
-		echo "<td>" . $li->id . "</td>";
-		echo "<td>" . $li->nome . "</td>";
-		echo "<td>" . $li->usuario . "</td>";
-		echo "<td>" . $li->senha . "</td>";
-		echo "<td>
-				<a href='/System/system/site/home/form/". $li->id ."'>Editar</a>
-			  </td>
-			  <td>
-				<a href='/System/system/site/home/delete/". $li->id ."'>Excluir</a><br>
-			  </td>
-		";
-		echo "</tr>";
-	}
-	// echo "<pre>";
-	// print_r($view_list);
-	// echo "</pre>";
-	// exit();
-?>
-	</table>
-	<button><a href="/System/system/site/home/form">ADICIONAR NOVO</a></button>
-	<!-- <button href="/site/home/form">ADICIONAR NOVO</button> -->
+	<!-- Breadcomb area End-->
+	<!-- Data Table area Start-->
+	<div class="data-table-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<a href="/System/system/site/home/form">
+						<button class="btn btn-primary notika-btn-primary">ADICIONAR NOVO</button>
+					</a>
+					<div class="data-table-list">
+						<div class="basic-tb-hd">
+							<h2>Produtos</h2>
+							<p>Aqui estão os produtos salvo no sistema!</p>
+						</div>
+						<div class="table-responsive">
+							<table id="data-table-basic" class="table table-striped">
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>NOME</th>
+										<th>USUARIO</th>
+										<th>SENHA</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+										foreach ($view_list as $li) {
+											echo "<tr>";
+											echo "<td>" . $li->id . "</td>";
+											echo "<td>" . $li->nome . "</td>";
+											echo "<td>" . $li->usuario . "</td>";
+											echo "<td>" . $li->senha . "</td>";
+											echo "<td>
+													<a href='/System/system/site/home/form/". $li->id ."'>Editar</a>
+												  </td>
+												  <td>
+													<a href='/System/system/site/home/delete/". $li->id ."'>Excluir</a><br>
+												  </td>
+											";
+											echo "</tr>";
+										}
+										// echo "<pre>";
+										// print_r($view_list);
+										// echo "</pre>";
+										// exit();
+									?>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th>#</th>
+										<th>NOME</th>
+										<th>USUARIO</th>
+										<th>SENHA</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 <?php
 	include_once 'view/pattern/footer.php'
 ?>
