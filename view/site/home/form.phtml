@@ -1,16 +1,54 @@
 <?php include_once 'view/pattern/header.php' ?>
-	<h1>EDITAR</h1>
-	<form action="/System/system/site/home/save" method="post">
-		<input type="hidden" name="id" value="<?php echo $view_dados->id ?>" placeholder="id">
-		<br>
-		<input type="text" name="nome" value="<?php echo $view_dados->nome ?>" placeholder="nome">
-		<br>
-		<input type="text" name="usuario" value="<?php echo $view_dados->usuario ?>" placeholder="usuario">
-		<br>
-		<input type="text" name="senha" value="<?php echo $view_dados->senha ?>" placeholder="senha">
-		<br>
-		<button type="submit">Gravar</button>
-	</form>
+	<!-- Breadcomb area End-->
+    <!-- Form Element area Start-->
+    <form action="/System/system/site/home/save" method="post" class="form-element-area">
+			<input type="hidden" class="form-control" name="id" value="<?php echo $view_dados->id ?>" placeholder="id">        
+			<div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="form-element-list">
+                        <div class="basic-tb-hd">
+                            <h2>Produto</h2>
+                            <p>Entre com os valores do produtos!</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-support"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+										<input class="form-control" type="text" name="nome" value="<?php echo $view_dados->nome ?>" placeholder="nome">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-support"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+										<input class="form-control" type="text" name="usuario" value="<?php echo $view_dados->usuario ?>" placeholder="usuario"> 
+									</div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                                <div class="form-group ic-cmp-int">
+                                    <div class="form-ic-cmp">
+                                        <i class="notika-icon notika-phone"></i>
+                                    </div>
+                                    <div class="nk-int-st">
+                                    	<input class="form-control" type="text" name="senha" value="<?php echo $view_dados->senha ?>" placeholder="senha">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn notika-btn-green btn-reco-mg btn-button-mg"><i class="notika-icon notika-checked"></i> Gravar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
 <?php
 	// echo "<pre>";
 	// print_r($view_list);
